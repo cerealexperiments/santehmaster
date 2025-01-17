@@ -138,11 +138,13 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 99;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .nav-overlay.active {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .hero {
@@ -779,6 +781,8 @@ body {
   .hero-image {
     order: 2;
     padding: 0 1rem;
+    position: relative; /* Add this */
+    z-index: 0; /* Add this */
   }
 
   .hero-image img {
@@ -789,16 +793,23 @@ body {
   .hero-content {
     order: 1;
     padding: 0 1rem;
+    position: relative; /* Add this */
+    z-index: 1; /* Add this */
   }
 
   .button-group {
     flex-direction: column;
     gap: 1rem;
+    position: relative; /* Add this */
+    z-index: 2; /* Add this */
   }
 
   .button {
     width: 100%;
     justify-content: center;
+    position: relative; /* Add this */
+    z-index: 2; /* Add this */
+    cursor: pointer; /* Add this */
   }
 
   .stats {
