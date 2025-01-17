@@ -16,6 +16,18 @@ body {
   padding: 0 1rem;
 }
 
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.button-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -841,5 +853,76 @@ body {
 
   .service-card {
     max-width: 100%;
+  }
+}
+
+.floating-whatsapp {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  opacity: 0.9;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.floating-whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    display: block;
+  }
+}
+
+.floating-whatsapp {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #128c7e;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  background-color: #075e54;
+}
+
+.floating-whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    display: block;
   }
 }
